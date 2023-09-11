@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!C:/python/python.exe
 
-with open("2-print.py", "w") as f:
-    print("Programming is like building a multilingual puzzle", file=f)
+print("programming is like building a multilingual puzzle")
+
