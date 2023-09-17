@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+"""" Thius module defines the square class """
+
 
 class Square:
 
