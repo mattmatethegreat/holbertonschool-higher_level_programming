@@ -1,10 +1,9 @@
 #!/usr/bin/python3
+"""This module defines the Square class"""
+
 
 class Square:
 
-    """
-   This is the representation for the square.
-   """
+    """Empty class that defines a square"""
 
-
-pass
+    pass
