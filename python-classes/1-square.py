@@ -2,9 +2,11 @@
 """
 defines a class
 """
+
+
 class Square:
-    
-"""
+
+    """
 A class representing a square.
 
 Attributes: ___size (int): the size of the square.
