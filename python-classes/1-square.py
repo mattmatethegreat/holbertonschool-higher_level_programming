@@ -1,8 +1,18 @@
 #!/usr/bin/python3
 
 class Square:
-    def __init__(self, size):
-        self.__size = size
+    
+"""
+A class representing a square.
 
-    def get_size(self):
-        return self.__size
+Attributes: ___size (int): the size of the square.
+"""
+
+    def __init__(self, size):
+        """
+        Initializes a square instance.
+
+        Args:
+        size (int): size of the square.
+        """
+        self.__size = size
