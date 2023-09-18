@@ -1,5 +1,5 @@
 #!/usr/bin/python3
-""" defines square class"""
+""" defines rectangle class"""
 
 
 # rectangle.py
