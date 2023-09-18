@@ -1,14 +1,5 @@
 #!/usr/bin/python3
-
-"""
-This module provides a Rectangle class for representing rectangles.
-
-The Rectangle class has attributes for width and height, and methods
-for calculating the area and perimeter of the rectangle. It also
-overrides the __str__ and __repr__ methods for string representation
-of the rectangle object.
-
-"""
+"""Module defines square class"""
 
 
 class Rectangle:
