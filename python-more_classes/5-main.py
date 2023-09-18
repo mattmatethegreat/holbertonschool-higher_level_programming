@@ -1,4 +1,7 @@
 #!/usr/bin/python3
+""" Defines the rectangle class"""
+
+
 Rectangle = __import__('5-rectangle').Rectangle
 
 my_rectangle = Rectangle(2, 4)

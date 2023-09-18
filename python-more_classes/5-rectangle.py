@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" defines rectangle class"""
+
 
 class Rectangle:
     """
@@ -43,13 +45,13 @@ class Rectangle:
         Returns a string representation of the rectangle.
 
         Returns:
-            str: A string representation of the rectangle using the character '#'.
+            str: A representation of rectangle using #.
         """
         # Implementation...
 
     def __repr__(self):
         """
-        Returns a string representation of the rectangle that can be used to recreate a new instance.
+        Returns a string that can be used to recreate a new instance.
 
         Returns:
             str: A string representation of the rectangle.
@@ -63,4 +65,3 @@ class Rectangle:
         Prints the message "Bye rectangle...".
         """
         print("Bye rectangle...")
-
