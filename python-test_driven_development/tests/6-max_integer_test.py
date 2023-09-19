@@ -1,5 +1,3 @@
-#!/usr/bin/python3
-
 import unittest
 from main import max_integer
 
@@ -22,3 +20,4 @@ class MaxIntegerTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
+
