@@ -21,10 +21,3 @@ def print_square(size):
 
     for _ in range(size):
         print("#" * size)
-
-print_square(4)
-print("")
-print_square(10)
-print("")
-print_square(0)
-print```
