@@ -4,7 +4,7 @@ def uppercase(string):
     for char in string:
         uppercase_char = char.upper()
         uppercase_string += uppercase_char
-    print(uppercase_string)
+    print("Uppercase: {}".format(uppercase_string))
 
 uppercase("best")
 uppercase("Best School 98 Battery street")
