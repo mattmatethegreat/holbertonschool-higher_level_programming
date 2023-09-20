@@ -1,5 +1,5 @@
 import unittest
-from main import max_integer
+from 6-main import max_integer
 
 class MaxIntegerTestCase(unittest.TestCase):
     def test_empty_list(self):
@@ -20,4 +20,3 @@ class MaxIntegerTestCase(unittest.TestCase):
 
 if __name__ == '__main__':
     unittest.main()
-
