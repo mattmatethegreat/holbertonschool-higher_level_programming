@@ -1,26 +1,20 @@
 #!/usr/bin/python3
-"""Module defines rectangle class"""
-
 
 class Rectangle:
     """
-    A class representing a rectangle.
-
-    Attributes:
-        width (int): The width of the rectangle.
-        height (int): The height of the rectangle.
+    A class representing a rectangle with width and height.
     """
 
     def __init__(self, width=0, height=0):
         """
-        Initializes a new instance of the Rectangle class.
+        Initialize a Rectangle object with the given width and height.
 
         Args:
-            width (int, optional): The width of the rectangle. Defaults to 0.
-            height (int, optional): The height of the rectangle. Defaults to 0.
+            width (int): The width of the rectangle. Defaults to 0.
+            height (int): The height of the rectangle. Defaults to 0.
         """
-        self.width = width
-        self.height = height
+        self._width = width
+        self._height = height
 
     @property
     def width(self):
@@ -30,7 +24,7 @@ class Rectangle:
         Returns:
             int: The width of the rectangle.
         """
-        return self.__width
+        return self._width
 
     @width.setter
     def width(self, value):
@@ -38,7 +32,7 @@ class Rectangle:
         Set the width of the rectangle.
 
         Args:
-            value (int): The width of the rectangle.
+            value (int): The new width value.
 
         Raises:
             TypeError: If the value is not an integer.
@@ -48,7 +42,7 @@ class Rectangle:
             raise TypeError("width must be an integer")
         if value < 0:
             raise ValueError("width must be >= 0")
-        self.__width = value
+        self._width = value
 
     @property
     def height(self):
@@ -58,7 +52,7 @@ class Rectangle:
         Returns:
             int: The height of the rectangle.
         """
-        return self.__height
+        return self._height
 
     @height.setter
     def height(self, value):
@@ -66,7 +60,7 @@ class Rectangle:
         Set the height of the rectangle.
 
         Args:
-            value (int): The height of the rectangle.
+            value (int): The new height value.
 
         Raises:
             TypeError: If the value is not an integer.
@@ -76,7 +70,7 @@ class Rectangle:
             raise TypeError("height must be an integer")
         if value < 0:
             raise ValueError("height must be >= 0")
-        self.__height = value
+        self._height = value
 
     def area(self):
         """
@@ -85,7 +79,7 @@ class Rectangle:
         Returns:
             int: The area of the rectangle.
         """
-        return self.width * self.height
+        return self._width * self._height
 
     def perimeter(self):
         """
@@ -94,36 +88,27 @@ class Rectangle:
         Returns:
             int: The perimeter of the rectangle.
         """
-        return 2 * (self.width + self.height)
+        return 2 * (self._width + self._height)
 
     def __str__(self):
         """
-        Get a string representation of the rectangle.
+        Return a string representation of the rectangle using '#' characters.
 
         Returns:
             str: The string representation of the rectangle.
         """
-        return f"Rectangle(width={self.width}, height={self.height})"
+        if self._width == 0 or self._height == 0:
+            return ""
+        rectangle_str = ""
+        for _ in range(self._height):
+            rectangle_str += "#" * self._width + "\n"
+        return rectangle_str.rstrip()
 
     def __repr__(self):
         """
-        Get a string representation of the rectangle.
+        Return a string representation of the rectangle object.
 
         Returns:
-            str: The string representation of the rectangle.
+            str: The string representation of the rectangle object.
         """
-        return f"Rectangle(width={self.width}, height={self.height})"
-
-my_rectangle = Rectangle(2, 4)
-
-print("Area: {} - Perimeter: {}".format(my_rectangle.area(), my_rectangle.perimeter()))
-
-print(str(my_rectangle))
-print(repr(my_rectangle))
-
-print("--")
-
-my_rectangle.width = 10
-my_rectangle.height = 3
-print(my_rectangle)
-print(repr(my_rectangle))
+        return f"<Rectangle width={self._width}, height={self._height}>"
