@@ -1,10 +1,11 @@
 #!/usr/bin/python3
-def uppercase(string):
-    uppercase_string = ""
-    for char in string:
-        uppercase_char = char.upper()
-        uppercase_string += uppercase_char
-    print("Uppercase: {}".format(uppercase_string))
+def uppercase(str):
+    result = ""
+    for char in str:
+        uppercase_char = chr(ord(char) - 32)
+        result += uppercase_char
+    print(result)
 
+# Test the function
 uppercase("best")
 uppercase("Best School 98 Battery street")
