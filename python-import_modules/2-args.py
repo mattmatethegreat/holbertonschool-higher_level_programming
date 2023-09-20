@@ -4,12 +4,16 @@ import sys
 arguments = sys.argv[1:]
 num_arguments = len(arguments)
 
+output = ""
+
 if num_arguments == 0:
-    print("0 arguments.")
+    output += "0 arguments.\n"
 elif num_arguments == 1:
-    print("1 argument:")
+    output += "1 argument:\n"
 else:
-    print(f"{num_arguments} arguments:")
+    output += f"{num_arguments} arguments:\n"
 
 for i, argument in enumerate(arguments):
-    print(f"{i + 1}: {argument}")
+    output += f"{i + 1}: {argument}\n"
+
+print(output)
