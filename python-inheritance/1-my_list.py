@@ -1,5 +1,9 @@
+#!/usr/bin/python3
+""" defines list class that inherits from built in list class"""
+
+
 class MyList(list):
-    """ Defines list class that inherits from the built-in list class."""
+    """ implements sorted printing for built-in list class."""
 
     def print_sorted(self):
         """
