@@ -4,10 +4,12 @@
 
 def write_file(filename="", text=""):
     """
-    Writes the given text to a text file (UTF8) and returns the number of characters written.
+    Writes the given text to a text file (UTF8)
+    returns the number of characters written.
 
     Args:
-        filename (str): The name of the file to write to. If the file doesn't exist, it will be created.
+        filename (str): The name of the file to write to.
+        If the file doesn't exist, it will be created.
         text (str): The text to write to the file.
 
     Returns:
