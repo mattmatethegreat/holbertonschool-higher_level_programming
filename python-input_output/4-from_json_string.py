@@ -4,6 +4,7 @@
 
 import json
 
+
 def from_json_string(my_str):
     """
     Deserialize a JSON string into a Python object.
