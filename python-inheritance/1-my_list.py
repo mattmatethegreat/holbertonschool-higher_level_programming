@@ -1,5 +1,5 @@
 class MyList(list):
-    """ Custom list class that inherits from the built-in list class."""
+    """ Defines list class that inherits from the built-in list class."""
 
     def print_sorted(self):
         """
@@ -8,5 +8,4 @@ class MyList(list):
         Returns:
             None
         """
-    sorted_list = sorted(self)
-    print(sorted_list)
+    print(sorted(self))
