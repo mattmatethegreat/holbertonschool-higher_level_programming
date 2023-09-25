@@ -1,11 +1,11 @@
 #!/usr/bin/python3
-""" defines path """
+"""defines path """
 
 
 def inherits_from(obj, a_class):
     """
     Checks if an object is an instance of a class that inherited
-    (directly or indirectly) from the specified class.
+(directly or indirectly) from the specified class.
 
     Parameters:
     obj (object): The object to check.
@@ -13,6 +13,9 @@ def inherits_from(obj, a_class):
 
     Returns:
     bool: True if the object is an instance of a class that inherited
-    (directly or indirectly) from the specified class. False otherwise.
+(directly or indirectly) from the specified class. False otherwise.
     """
-    return any(a_class in cls.__bases__ for cls in type(obj).__mro__[1:])
+    cls = type(obj)
+    if cls == a_class:
+        return False
+    return issubclass(cls, a_class)
