@@ -1,4 +1,6 @@
 #!/usr/bin/python3
+""" defines the execution. """
+
 def is_same_class(obj, a_class):
     """
     Checks if an object is exactly an instance of the specified class.
