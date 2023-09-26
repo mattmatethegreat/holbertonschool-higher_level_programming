@@ -1,37 +1,47 @@
-#!/usr/bin/paste3
-""" defines path """
+#!/usr/bin/pyython3
+"""shebang """
 
 
 from base_geometry import BaseGeometry
-
 
 class Rectangle(BaseGeometry):
     """
     A class representing a rectangle.
 
+    This class inherits from the BaseGeometry class and provides
+    functionality specific to rectangles.
+
     Attributes:
-    - _width (int): The width of the rectangle.
-    - _height (int): The height of the rectangle.
+        None
+
+    Methods:
+        __init__: Initialize the Rectangle object.
+        __str__: Get a string representation of the Rectangle object.
+
     """
 
     def __init__(self, width, height):
         """
-        Initialize a Rectangle instance.
+        Initialize the Rectangle object.
 
-        Args:
-        - width (int): The width of the rectangle.
-        - height (int): The height of the rectangle.
+        Arguments:
+            width (int): The width of the rectangle.
+            height (int): The height of the rectangle.
+
+        Raises:
+            TypeError: If the width or height is not an integer.
+            ValueError: If the width or height is less than or equal to 0.
+
         """
-        self.integer_validator("_width", width)
-        self.integer_validator("_height", height)
-        self._width = width
-        self._height = height
+        self.__width = self.integer_validator('width', width)
+        self.__height = self.integer_validator('height', height)
 
     def __str__(self):
         """
-        Return a string representation of the rectangle.
+        Get a string representation of the Rectangle object.
 
         Returns:
-        - str: The string representation of the rectangle.
+            str: A string representation of the Rectangle object.
+
         """
-        return f"<Rectangle: width={self._width}, height={self._height}>"
+        return f"<Rectangle width={self.__width}, height={self.__height}>"
