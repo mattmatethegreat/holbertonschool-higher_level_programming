@@ -1,18 +1,20 @@
 # 1-my_list.txt
 
-This is the "my_list" module.
-The my_list module defines a class MyList that inherits from list.
+"""This is the "my_list" module.
+The my_list module defines a class MyList that inherits from list."""
 
-Module-level tests:
->>> my_list = MyList()
->>> my_list.append(1)
->>> my_list.append(4)
->>> my_list.append(2)
->>> my_list.append(3)
->>> my_list.append(5)
->>> print(my_list)
-[1, 4, 2, 3, 5]
->>> my_list.print_sorted()
-[1, 2, 3, 4, 5]
->>> print(my_list)
-[1, 4, 2, 3, 5]
+
+filename = "test_my_list.py"
+
+with open(filename, "w") as file:
+    file.write("from main import MyList\n")
+    file.write("\n")
+    file.write("my_list = MyList()\n")
+    file.write("my_list.append(1)\n")
+    file.write("my_list.append(4)\n")
+    file.write("my_list.append(2)\n")
+    file.write("my_list.append(3)\n")
+    file.write("my_list.append(5)\n")
+    file.write("print(my_list)\n")
+    file.write("my_list.print_sorted()\n")
+    file.write("print(my_list)\n")

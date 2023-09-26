@@ -1,47 +1,35 @@
-#!/usr/bin/pyython3
+#!/usr/bin/python3
 """shebang """
 
 
 from base_geometry import BaseGeometry
 
 class Rectangle(BaseGeometry):
-    """
-    A class representing a rectangle.
-
-    This class inherits from the BaseGeometry class and provides
-    functionality specific to rectangles.
-
-    Attributes:
-        None
-
-    Methods:
-        __init__: Initialize the Rectangle object.
-        __str__: Get a string representation of the Rectangle object.
-
-    """
+    """A class representing a rectangle."""
 
     def __init__(self, width, height):
-        """
-        Initialize the Rectangle object.
+        """Initialize a Rectangle instance.
 
-        Arguments:
+        Args:
             width (int): The width of the rectangle.
             height (int): The height of the rectangle.
-
-        Raises:
-            TypeError: If the width or height is not an integer.
-            ValueError: If the width or height is less than or equal to 0.
-
         """
-        self.__width = self.integer_validator('width', width)
-        self.__height = self.integer_validator('height', height)
+        self.__width = width
+        self.__height = height
 
     def __str__(self):
-        """
-        Get a string representation of the Rectangle object.
+        """Return a string representation of the rectangle."""
+        return "[Rectangle] {}/{}".format(self.__width, self.__height)
+
+    def area(self):
+        """Calculate the area of the rectangle.
 
         Returns:
-            str: A string representation of the Rectangle object.
-
+            int: The area of the rectangle.
         """
-        return f"<Rectangle width={self.__width}, height={self.__height}>"
+        return self.__width * self.__height
+
+
+rectangle = Rectangle(5, 10)
+print(rectangle)
+
