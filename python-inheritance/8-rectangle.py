@@ -1,35 +1,21 @@
 #!/usr/bin/python3
-"""shebang """
+"""shebang."""
 
 
-from base_geometry import BaseGeometry
+BaseGeometry = __import__('7-base_geometry').BaseGeometry
+
 
 class Rectangle(BaseGeometry):
-    """A class representing a rectangle."""
+    """Rectangle using BaseGeometry."""
 
     def __init__(self, width, height):
-        """Initialize a Rectangle instance.
+        """Intialize rectangle.
 
         Args:
-            width (int): The width of the rectangle.
-            height (int): The height of the rectangle.
+            width of the new Rectangle.
+            height of the new Rectangle.
         """
+        self.integer_validator("width", width)
         self.__width = width
+        self.integer_validator("height", height)
         self.__height = height
-
-    def __str__(self):
-        """Return a string representation of the rectangle."""
-        return "[Rectangle] {}/{}".format(self.__width, self.__height)
-
-    def area(self):
-        """Calculate the area of the rectangle.
-
-        Returns:
-            int: The area of the rectangle.
-        """
-        return self.__width * self.__height
-
-
-rectangle = Rectangle(5, 10)
-print(rectangle)
-
