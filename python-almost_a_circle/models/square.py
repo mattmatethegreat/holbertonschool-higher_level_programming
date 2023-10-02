@@ -1,22 +1,19 @@
 #!/usr/bin/python3
 """Defines a square class."""
-
-
 from models.rectangle import Rectangle
+
 
 class Square(Rectangle):
     """Represent a square."""
 
     def __init__(self, size, x=0, y=0, id=None):
-        """Initialize a new Square."""
-        
-	super().__init__(size, size, x, y, id)
+        """Initialize a new square."""
+        super().__init__(size, size, x, y, id)
 
     @property
     def size(self):
-        """the size of the square."""
-        
-	return self.width
+        """Get/set the size of square."""
+        return self.width
 
     @size.setter
     def size(self, value):
@@ -24,9 +21,8 @@ class Square(Rectangle):
         self.height = value
 
     def update(self, *args, **kwargs):
-        """Update the square."""
-        
-	if args:
+        """Update the Square."""
+        if args and len(args) != 0:
             a = 0
             for arg in args:
                 if a == 0:
@@ -42,7 +38,7 @@ class Square(Rectangle):
                     self.y = arg
                 a += 1
 
-        elif kwargs:
+        elif kwargs and len(kwargs) != 0:
             for k, v in kwargs.items():
                 if k == "id":
                     if v is None:
@@ -57,12 +53,15 @@ class Square(Rectangle):
                     self.y = v
 
     def to_dictionary(self):
-        """Return dictionary representation of the Square."""
-        
-	return {"id": self.id, "size": self.width, "x": self.x, "y": self.y}
+        """Return dictionary representation of square."""
+        return {
+            "id": self.id,
+            "size": self.width,
+            "x": self.x,
+            "y": self.y
+        }
 
     def __str__(self):
-        """Return the print and string representation of a Square."""
-        
-	return "[Square] ({}) {}/{} - {}".format(self.id,
-	self.x, self.y, self.width)
+        """Return the print/string of a Square."""
+        return "[Square] ({}) {}/{} - {}".format(self.id, self.x, self.y,
+                                                 self.width)
