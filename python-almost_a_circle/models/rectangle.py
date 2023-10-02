@@ -16,6 +16,8 @@ class Rectangle(Base):
 
     @property
     def width(self):
+        """ Rectangle width """
+
         return self.__width
 
     @width.setter
@@ -28,6 +30,8 @@ class Rectangle(Base):
 
     @property
     def height(self):
+        """Rectanggle height """
+
         return self.__height
 
     @height.setter
@@ -40,6 +44,8 @@ class Rectangle(Base):
 
     @property
     def x(self):
+        """ Rectanggle X coordinate. """
+
         return self.__x
 
     @x.setter
@@ -52,6 +58,8 @@ class Rectangle(Base):
 
     @property
     def y(self):
+        """ Rectangle Y coordinate."""
+
         return self.__y
 
     @y.setter
@@ -63,6 +71,7 @@ class Rectangle(Base):
         self.__y = value
 
     def area(self):
+        """ Returns RRectangle area"""
         return self.width * self.height
 
     def display(self):
